@@ -384,7 +384,7 @@ def logout():
     return response
 
 
-@app.route('/api/admin/dashboard')
+@app.route('/api/dashboard')
 def admin_dashboard():
     total_books = len(Book.query.all())
     total_customers = len(Customer.query.all())
@@ -434,10 +434,10 @@ def search():
     # Serve the books.html file from the frontend folder
     return send_from_directory('../frontend', 'search.html')
 
-@app.route('/admin.html')
-def admin():
+@app.route('/dashboard.html')
+def dashboard():
     # Serve the books.html file from the frontend folder
-    return send_from_directory('../frontend', 'admin.html')
+    return send_from_directory('../frontend', 'dashboard.html')
 
 
 

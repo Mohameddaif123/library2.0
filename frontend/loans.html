@@ -110,7 +110,7 @@
         fetchLateLoans();
     }
 
-    // Function to fetch and display late loans
+    
     // Function to fetch and display late loans
     function fetchLateLoans() {
         axios.get('/late_loans')
@@ -165,7 +165,7 @@
                     }
 
                     var deleteButton = document.createElement('button');
-                    deleteButton.textContent = 'Delete Loan';
+                    deleteButton.textContent = 'Return Book';
                     deleteButton.onclick = function () {
                         deleteLoan(loan.id);
                     };

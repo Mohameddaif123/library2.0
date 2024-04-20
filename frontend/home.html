@@ -95,11 +95,11 @@
                 </a>
             </div>
             <div class="col-md-4">
-                <a href="admin.html" class="text-decoration-none text-dark">
+                <a href="dashboard.html" class="text-decoration-none text-dark">
                     <div class="card shadow">
                         <div class="card-body">
-                            <h2 class="card-title">Admin👩‍💼</h2>
-                            <p class="card-text">Admin operations and management</p>
+                            <h2 class="card-title">dashboard👩‍💼</h2>
+                            <p class="card-text"> data operations and management</p>
                         </div>
                     </div>
                 </a>
@@ -115,31 +115,7 @@
     </div>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-    fetch("/api/admin/check-role", {
-        method: "GET",
-        headers: {
-            "Authorization": "Bearer " + localStorage.getItem("access_token")
-        }
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.role === "admin") {
-            // User is an admin
-            isAdmin = true;
-            // Show the admin dashboard link
-            document.getElementById("adminDashboardLink").style.display = "block";
-        } else {
-            // User is not an admin
-            isAdmin = false;
-            // Hide the admin dashboard link
-            document.getElementById("adminDashboardLink").style.display = "none";
-        }
-    })
-    .catch(error => {
-        console.error("Error:", error);
-    });
-});
+       
     </script>
 
     <!-- Bootstrap JS and jQuery (optional) -->
